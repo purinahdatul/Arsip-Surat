@@ -1,0 +1,170 @@
+/* Import Font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* === Variabel Warna & Gaya Global === */
+:root {
+    --primary-color: #4A90E2;
+    --primary-hover: #357ABD;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --light-gray: #f8f9fa;
+    --border-color: #dee2e6;
+    --text-color: #333;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: #f4f7f6;
+    color: var(--text-color);
+}
+
+/* === Sidebar Menu === */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding-top: 48px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+.sidebar .nav-link { color: #555; font-weight: 500; padding: 12px 24px; border-left: 4px solid transparent; transition: all 0.3s ease; display: flex; align-items: center; }
+.sidebar .nav-link .fas { width: 20px; margin-right: 12px; text-align: center; }
+.sidebar .nav-link:hover { background-color: var(--light-gray); color: var(--primary-color); border-left-color: var(--primary-color); }
+.sidebar .nav-link.active { background-color: #e9f5ff; color: var(--primary-hover); border-left-color: var(--primary-hover); font-weight: 600; }
+
+/* === Konten Utama & Card === */
+.main-content { margin-left: 240px; padding: 30px; }
+.content-wrapper {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    border-top: 4px solid var(--primary-color); /* Garis Aksen */
+}
+h2 { font-weight: 600; color: #333; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border-color); }
+
+/* === Breadcrumbs === */
+.breadcrumb-container {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    list-style: none;
+    background-color: var(--light-gray);
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+.breadcrumb-container a { color: var(--primary-color); text-decoration: none; }
+.breadcrumb-container a:hover { text-decoration: underline; }
+
+/* === Formulir Modern === */
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { font-weight: 500; margin-bottom: 0.5rem; display: block; }
+.form-control, .form-control-file, .custom-select {
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    height: auto;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.form-control:focus, .custom-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25);
+}
+.form-control-plaintext { padding-left: 0; font-weight: 500; }
+
+/* === Form Pencarian dengan Ikon === */
+.search-container {
+    position: relative;
+    width: 300px;
+}
+.search-container .form-control {
+    padding-left: 2.5rem;
+    border-radius: 50px;
+}
+.search-container .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+}
+
+/* === Tabel === */
+.table thead {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--border-color);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+.table th { font-weight: 600; }
+.table td, .table th { vertical-align: middle; }
+.table-hover tbody tr { transition: background-color 0.2s ease-in-out; }
+.table-striped tbody tr:nth-of-type(odd) { background-color: rgba(0, 0, 0, 0.02); }
+
+/* === Tombol Umum (Bentuk Kapsul) === */
+.btn { border-radius: 50px; font-weight: 500; padding: 0.6rem 1.2rem; transition: all 0.2s; }
+.btn-sm { padding: 0.3rem 0.9rem; font-size: 0.8rem; }
+.btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+.btn-primary:hover { background-color: var(--primary-hover); border-color: var(--primary-hover); }
+.btn-success { background-color: var(--success-color); border-color: var(--success-color); }
+.btn-secondary { background-color: var(--secondary-color); border-color: var(--secondary-color); }
+.btn-info { background-color: #17a2b8; border-color: #17a2b8; }
+.btn-warning { background-color: #ffc107; border-color: #ffc107; }
+.btn-danger { background-color: var(--danger-color); border-color: var(--danger-color); }
+.btn:hover { transform: translateY(-2px); }
+
+/* === Halaman About (Layout 2 Kolom Sesuai Wireframe) === */
+
+/* Gaya untuk foto/ikon persegi panjang */
+.profile-img-rect {
+    width: 100%;
+    max-width: 200px; /* Batasi lebar maksimum foto */
+    height: auto;
+    border: 3px solid var(--border-color);
+    border-radius: 8px; /* Sudut sedikit melengkung */
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Gaya untuk wadah ikon fallback persegi panjang */
+.profile-icon-rect {
+    width: 100%;
+    max-width: 200px;
+    height: 250px; /* Beri tinggi agar terlihat seperti potret */
+    border: 3px solid var(--border-color);
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px; /* Ukuran ikon di dalam kotak */
+    color: var(--secondary-color);
+    margin: 0 auto; /* Menengahkan kotak ikon jika kolom lebih lebar */
+}
+
+/* Gaya untuk teks di sisi kanan */
+.profile-text-header {
+    font-weight: 500;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.profile-text-table td {
+    padding: 0.5rem 0.25rem;
+    font-size: 1.1rem;
+    vertical-align: top;
+}
+
+.profile-text-table strong {
+    color: var(--text-color);
+}
