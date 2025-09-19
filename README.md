@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -59,3 +60,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Arsip-Surat
+Aplikasi Arsip Surat adalah solusi web untuk mengelola dokumen digital secara efisien. Sistem ini memungkinkan pengguna untuk mengunggah surat PDF, mengklasifikasikannya per kategori, dan melakukan pencarian cepat. Fungsionalitas lengkapnya mencakup kemampuan untuk melihat, mengunduh, mengedit, dan menghapus arsip dengan mudah dan aman.
+SHGVs
+>>>>>>> da0cfa9992184823841a5fd56c80294236b6a803
