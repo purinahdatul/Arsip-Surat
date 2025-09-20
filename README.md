@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -8,60 +8,81 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Aplikasi Arsip Surat Berbasis Web
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tujuan Proyek
+Tujuannya adalah untuk memudahkan proses pencatatan, penyimpanan, dan pencarian surat masuk dan surat keluar secara efisien dan terstruktur.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Fitur-fitur Utama
+Berdasarkan fungsionalitas yang ada, berikut adalah fitur-fitur utama dari aplikasi ini:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* **Manajemen Arsip Surat**
+    * **Unggah Surat Baru:** Mengarsipkan surat dengan mengisi form yang berisi Nomor Surat, Judul, Kategori, dan melampirkan file PDF.
+    * **Lihat Daftar Surat:** Menampilkan seluruh surat yang telah diarsipkan dalam format tabel yang informatif.
+    * **Pencarian Surat:** Memudahkan pengguna menemukan surat tertentu dengan cepat melalui kolom pencarian.
+    * **Detail, Unduh, dan Hapus:** Menyediakan aksi untuk melihat detail, mengunduh file surat, dan menghapus data arsip.
 
-## Learning Laravel
+* **Manajemen Kategori Surat**
+    * **CRUD Kategori:** Fungsionalitas penuh untuk Tambah, Lihat, Edit, dan Hapus (CRUD) kategori surat.
+    * **Pengelompokan Surat:** Kategori digunakan untuk mengelompokkan surat agar lebih terorganisir.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* **Halaman Informasi (About)**
+    * Menampilkan detail informasi mengenai pengembang aplikasi, termasuk Nama, Prodi, NIM, dan tanggal pembuatan.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Cara Menjalankan Aplikasi
+Untuk menjalankan aplikasi ini di komputer lokal Anda, ikuti langkah-langkah berikut:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1.  **Clone Repository**
+    ```bash
+    git clone [https://github.com/purinahdatul/Arsip-Surat.git](https://github.com/purinahdatul/Arsip-Surat.git)
+    ```
+2.  **Masuk ke Direktori Proyek**
+    ```bash
+    cd Arsip-Surat
+    ```
+3.  **Install Dependensi Laravel**
+    ```bash
+    composer install
+    ```
+4.  **Konfigurasi Lingkungan (Environment)**
+    * Salin file `.env.example` menjadi `.env`.
+    * Jalankan perintah untuk membuat kunci aplikasi:
+        ```bash
+        php artisan key:generate
+        ```
+5.  **Setup Database**
+    * Buat sebuah database baru (misalnya `db_arsip_surat`).
+    * Atur konfigurasi database (DB_DATABASE, DB_USERNAME, DB_PASSWORD) di dalam file `.env`.
+    * Jalankan migrasi untuk membuat tabel-tabel yang dibutuhkan:
+        ```bash
+        php artisan migrate
+        ```
+6.  **Jalankan Server Lokal**
+    ```bash
+    php artisan serve
+    ```
+    * Buka browser dan akses alamat `http://127.0.0.1:8000`.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Screenshot Aplikasi
+Berikut adalah beberapa tangkapan layar dari website Arsip Surat yang telah dibuat.
 
-### Premium Partners
+**Halaman Arsip Surat:**
+![Tampilan Halaman Login](https://github.com/user-attachments/assets/93a05308-127d-4fff-a360-e97bba8f784e)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+**Halaman Unggah Arsip Surat:**
+![Tampilan Halaman Login](https://github.com/user-attachments/assets/54d36901-c76f-4019-aaa0-b6694d22970c)
 
-## Contributing
+**Halaman Kategori Surat:**
+![Tampilan Halaman Dashboard](https://github.com/user-attachments/assets/7e92f872-7958-4451-a19c-99792a00842a)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**Halaman Tambah Kategori Surat:**
+![Tampilan Halaman Dashboard](https://github.com/user-attachments/assets/52e2a882-7247-4386-9696-5a7248751958)
 
-## Code of Conduct
+**Halaman About:**
+![Tampilan Halaman Surat Masuk](https://github.com/user-attachments/assets/b188ae2e-a47b-494d-96f4-55c756201d3f)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
 # Arsip-Surat
 Aplikasi Arsip Surat adalah solusi web untuk mengelola dokumen digital secara efisien. Sistem ini memungkinkan pengguna untuk mengunggah surat PDF, mengklasifikasikannya per kategori, dan melakukan pencarian cepat. Fungsionalitas lengkapnya mencakup kemampuan untuk melihat, mengunduh, mengedit, dan menghapus arsip dengan mudah dan aman.
-SHGVs
->>>>>>> da0cfa9992184823841a5fd56c80294236b6a803
+
